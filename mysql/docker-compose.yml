@@ -1,0 +1,23 @@
+version: "3"
+
+volumes:
+  data-mysql:
+services:
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - data-mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345
+      - MYSQL_DATABASE = app_user_go
+
+  app:
+    image: phpmyadmin/phpmyadmin:latest
+    links:
+      - db
+    ports:
+      - "9001:9001"
+    environment:
+      - PMA_ARBITRARY=1
