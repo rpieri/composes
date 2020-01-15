@@ -4,7 +4,7 @@ volumes:
   data-postgres:
 services:
   db:
-    name: postgres-dev
+    container_name: postgres-dev
     image: postgres
     ports:
       - "5432:5432"
