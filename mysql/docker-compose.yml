@@ -11,7 +11,7 @@ services:
       - data-mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=12345
-      - MYSQL_DATABASE = app_user_go
+      - MYSQL_DATABASE=app_user_go
 
   app:
     image: phpmyadmin/phpmyadmin:latest
