@@ -13,13 +13,3 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=12345
       - MYSQL_DATABASE=app_user_go
-
-  app:
-    container_name: phpmyadmin-dev
-    image: phpmyadmin/phpmyadmin:latest
-    links:
-      - db
-    ports:
-      - "9001:80"
-    environment:
-      - PMA_ARBITRARY=1
