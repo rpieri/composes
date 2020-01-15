@@ -4,6 +4,7 @@ volumes:
   data-mysql:
 services:
   db:
+    name: mysql-dev
     image: mysql
     ports:
       - "3306:3306"
@@ -14,6 +15,7 @@ services:
       - MYSQL_DATABASE=app_user_go
 
   app:
+    name: phpmyadmin-dev
     image: phpmyadmin/phpmyadmin:latest
     links:
       - db

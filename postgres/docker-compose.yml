@@ -1,0 +1,14 @@
+version: "3"
+
+volumes:
+  data-postgres:
+services:
+  db:
+    name: postgres-dev
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - data-postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=P#stgr#s2020!#
