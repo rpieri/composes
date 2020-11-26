@@ -1,0 +1,15 @@
+version: "3"
+
+volumes:
+  data-mongo:
+services:
+  mongo:
+    container_name: mongo-dev
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - data-mongo:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: MongoDB2019!
